@@ -1,6 +1,6 @@
 defmodule ElixirExercises.GuessGame do
   def start do
-    guess(random, 1)
+    guess(random(), 1)
   end
 
   @doc """
@@ -54,7 +54,6 @@ defmodule ElixirExercises.GuessGame do
   end
 
   defp random do
-    :random.seed(:erlang.now())
-    round(:random.uniform() * 20 + 1)
+    round(:rand.uniform() * 100)
   end
 end
